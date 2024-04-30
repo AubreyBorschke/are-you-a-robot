@@ -1,37 +1,15 @@
 ! version = 2.0
 
-+ (hello|hi|hey|yo)
-- hi!
-+what is your name
--my name is forky, what is your name?
+! var name = joe
++ (hi|hello|hey|yo)
+- hi, my name is <bot name>. whats ur name?
 
-+ _
-% hello what is your name
-- Nice to meet you <formal>!
++ [my name is] *
+- <set name=<star>>nice to meet you, <get name>! my name is <bot name>.
 
-+ (my name is|i am|i'm) *
-- Nice to meet you <star>
-- Nice meeting you <star>
++ * 
+% <set name=<star>>
+% nice to meet you *my name is* heard you woke up feeling pretty shit would you like to vent about what has been upsetting you
+* <star> == yes => go for it, im listening
+* <star> == no => thats alright. 
 
-+ thank you
-- You are welcome
-- Welcome
-- No problem
-- No worries!
-
-+ knock knock
-- who's there?
-
-+ *
-% who is there
--<star> who
-
-+*
-%* who
-- Lol! Thats funny!
-
-
-- Sorry did not get what you said
-- I am afraid that I can not understand you
-- Sorry can you please elaborate that for me
-- I don't get it!
