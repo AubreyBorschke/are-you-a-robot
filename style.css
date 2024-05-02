@@ -1,14 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap");
 
+
 * {
-  font-family: "Inter", Arial;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   font-size: 12pt;
   margin: 0;
   box-sizing: border-box;
 }
 
 body {
-  background: #f2f2f2;
+  background: rgb(255, 253, 205);
 }
 
 .title {
@@ -20,7 +21,7 @@ body {
 
 .title h1 {
   letter-spacing: 0.75px;
-  color: blueviolet;
+  color: rgb(143, 159, 233);
 }
 
 .wrapper {
@@ -29,7 +30,7 @@ body {
 
 .chat {
   background: white;
-  box-shadow: 10px 10px 0px blueviolet;
+  box-shadow: 10px 10px 0px rgb(173, 209, 173);
   overflow: scroll;
   height: 100%;
   display: flex;
@@ -53,7 +54,7 @@ body {
 }
 
 .messages div a {
-  color: white;
+  color: rgb(106, 19, 79);
 }
 
 .messages div a:hover {
@@ -63,7 +64,7 @@ body {
 .messages .bot {
   text-align: left;
   margin-right: auto;
-  background: black;
+  background: pink;
   color: white;
 }
 
@@ -72,8 +73,8 @@ body {
   margin-right: 20px;
   margin-left: auto;
   background: white;
-  border: 1px solid blueviolet;
-  color: blueviolet;
+  border: 1px solid rgb(41, 73, 146);
+  color:  rgb(41, 73, 146);
 }
 
 .actions {
@@ -115,4 +116,27 @@ input:focus {
   .title {
     height: 7.5vh;
   }
+}
+
+
+.action {
+  font-size: 80%;
+  color: rgb(241, 225, 225);
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  display: inline-block;
+  margin-top: 5px;
+  background: rgba(0,0,0,0.1);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+img {
+  width: 100%;
+}
+.intro_name {
+  font-size: 90%;
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  text-align: center;
 }

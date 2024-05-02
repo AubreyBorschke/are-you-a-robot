@@ -1,15 +1,143 @@
 ! version = 2.0
 
-! var name = joe
-+ (hi|hello|hey|yo)
-- hi, my name is <bot name>. whats ur name?
 
-+ [my name is] *
-- <set name=<star>>nice to meet you, <get name>! my name is <bot name>.
 
-+ * 
-% <set name=<star>>
-% nice to meet you *my name is* heard you woke up feeling pretty shit would you like to vent about what has been upsetting you
-* <star> == yes => go for it, im listening
-* <star> == no => thats alright. 
+// + (hi|hello|yo|hey) [*]
+// - what's brewing! what is your name?
+// ^ <span class="action"> Reply with 'my name is ___'</span> 
 
++ (hi|hello|yo|hey) [*]
+- hi there! welcome to the wellness cafe! which coffee do you think fits you best today?
+^ <image src="/images/IMG_3663.jpg">
+^ <span class="intro_name">Joe</span>
+^ <image src="/images/IMG_3663.jpg">
+^ <span class="intro_name">Brewster</span>
+^ <image src="/images/IMG_3663.jpg">
+^ <span class="intro_name">Roasty</span>
+^ all of our coffee is more than welcome to talk to u abt ur day!
+^ <span class="action">Select a cup by typing their name</span>
+
+
++ [*] joe [*]
+- hi! my name is joe. what is your name? {topic=joe}
+
+> topic joe 
+    + my name is *
+    - <set name=<star>>nice to meet you, <get name>! i heard you woke up feeling pretty shit. would you like to vent about what has been upsetting you, or would you prefer to distract yourself? 
+    
+    + *
+    % nice to meet you * i heard you woke up feeling pretty shit would you like to vent about what has been upsetting you or would you prefer to distract yourself
+    * <star> == vent => go for it, i'm listening.
+    * <star> == distract => i am sorry to hear that. it is totally normal to feel a bit down. i can suggest some activities for you to do that will hopefully cheer you up! which category of activities sounds the best to you: outdoor activities (1), indoor activities (2), creative activities (3), social activities (4), or images! (5)
+
+    + [*] (mean|rude|unfair) [*]
+    - thats the worst
+    - noooooooo
+    - ugh i am sorry that you feel that way
+    
+    + [*] (tired|drained|exhausted) [*]
+    - coffee will help ;)
+    - zzzzzzzzzzzzz
+    
+    + 1
+    % i am sorry to hear that it is totally normal to feel a bit down i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
+    - go on a walk. do you like this activity?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+    - sit outside and read a book. do you like this activity?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+    - do some exercise. do you like this activity?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+    
+    + 2
+    % i am sorry to hear that it is totally normal to feel a bit down i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
+    - do some cooking or baking! try some new recipes or bake some treats. do you like this activity?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+    - put together a puzzle. do you like this activity?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+    - do some yoga or meditation. there's videos on youtube or online sessions you could use, or you can join a class! do you like this activity?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+    
+    + 3
+    % i am sorry to hear that it is totally normal to feel a bit down i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
+    - do some painting or drawing. express and release your feelings through some art! do you like this activity?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+    - grab a notebook, and start a journal, blog, or write some short stories! do you like this activity?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+    - host a private party in your room and dance to your favorite tunes! do you like this activity? 
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+    
+    + 4
+    % i am sorry to hear that it is totally normal to feel a bit down i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
+    - check out live or local events in your city. there could be concerts, sports events, or theater performances. even better, take some friends! do you like this activity?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+    - discover and join a local club that aligns with your interests (like a book club or gaming club). do you like this activity?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+    
+    + 5
+    % i am sorry to hear that it is totally normal to feel a bit down i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
+    - <image src="/images/IMG_3663.jpg">
+
+    + *
+    % [*] do you like this [*]
+    * <star> == yes => perf! go have fun! hope you feel better :)
+    * <star> == no => okay no worries, type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category: : outdoor activities (1), indoor activities (2), creative activities (3), social activities (4), or images! (5)
+    - just a yes or no response plz!
+
+    + 1
+    % okay no worries type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
+    - go on a walk. do you like this activity?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+    - sit outside and read a book. do you like this activity?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+    - do some exercise. do you like this activity?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span>
+
+    + 2
+    % okay no worries type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
+    - do some cooking or baking! try some new recipes or bake some treats. do you like this activity?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+    - put together a puzzle. do you like this activity?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+    - do some yoga or meditation. there's videos on youtube or online sessions you could use, or you can join a class! do you like this activity?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+    
+    + 3
+    % okay no worries type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
+    - do some painting or drawing. express and release your feelings through some art! do you like this activity?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+    - grab a notebook, and start a journal, blog, or write some short stories! do you like this activity?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+    - host a private party in your room and dance to your favorite tunes! do you like this activity? 
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+    
+    + 4
+    % okay no worries type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
+    - check out live or local events in your city. there could be concerts, sports events, or theater performances. even better, take some friends! do you like this activity?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+    - discover and join a local club that aligns with your interests (like a book club or gaming club). do you like this activity?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+    
+    + 5
+    % okay no worries type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
+    - <image src="/images/IMG_3663.jpg">
+
+< topic 
+
+
+
+
++[*] brewster [*]
+- hey there! my name is brewster. what is your name? {topic=brewster}
+
+> topic brewster
+
+< topic
+
+
+
++[*] roasty [*]
+- yo yo yo! my name is roasty. what is your name? {topic=roasty}
+
+> topic roasty
+
+< topic
