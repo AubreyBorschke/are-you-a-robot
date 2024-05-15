@@ -332,7 +332,6 @@
 < topic
 
 
-
 > topic roasty
 
     + my name is *
@@ -341,22 +340,45 @@
 
     + *
     % nice to meet you * i heard you woke up ready to take on the day want to make your day even betterspan classaction reply with yes or nospan
-    * <star> == yes => woohooooo!! making your day 10000000% BETTER! incoming: funny images!
-    * <star> == no => that is the wrong response! silly goose! incoming: funny images!
-    
-    + yes
-    % woohooooo making your day 10000000 BETTER incoming funny images
-    - <image src="/images/IMG_3663.jpg"> 
+    * <star> == yes => woohooooo!! making your day 10000000% BETTER! incoming: funny images! {random}
+    ^ <image src="/images/goosebubbles.jpg">|
+    ^ <image src="/images/cattongue.jpg">|
+    ^ <image src="/images/vampiredog.jpg">|
+    ^ <image src="/images/ducksunglasses.jpg">|
+    ^ <image src="/images/yolo swag.jpg"> {/random}
     ^ would you like a new image?
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+    * <star> == no => that is the wrong response! silly goose! incoming: funny images! {random}
+    ^ <image src="/images/goosebubbles.jpg">|
+    ^ <image src="/images/ducksunglasses.jpg">|
+    ^ <image src="/images/cattongue.jpg">|
+    ^ <image src="/images/vampiredog.jpg">|
+    ^ <image src="/images/yolo swag.jpg"> {/random}
+    
 
     + *
-    % [*] would you like a new imagespan classaction reply with yes or nospan
-    * <star> == yes => new image generating...
-    ^ <image src="/images/IMG_3663.jpg">
-    ^ would you like a new image
+    % woohooooo making your day 10000000 better incoming funny images image src*would you like a new imagespan classaction reply with yes or nospan
+    * <star> == yes => new image generating...{random}
+    ^ <image src="/images/goosebubbles.jpg">|
+    ^ <image src="/images/cattongue.jpg">|
+    ^ <image src="/images/ducksunglasses.jpg">|
+    ^ <image src="/images/vampiredog.jpg">|
+    ^ <image src="/images/yolo swag.jpg"> {/random}
+    ^ would you like a new image?
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     * <star> == no => enjoy!!!!!! hope the rest of your day is SPLENDID!!!!
+
+    + *
+    % new image generatingimage src*would you like a new imagespan classaction reply with yes or nospan
+    * <star> == yes => new image generating...{random}
+    ^ <image src="/images/goosebubbles.jpg">|
+    ^ <image src="/images/cattongue.jpg">|
+    ^ <image src="/images/vampiredog.jpg">|
+    ^ <image src="/images/ducksunglasses.jpg">|
+    ^ <image src="/images/yolo swag.jpg"> {/random}
+    ^ would you like a new image?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+    * <star> == no => hooray!!!!!! hope the rest of your day is as AMAZING as you are!!!!
 
 
 < topic
