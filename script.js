@@ -32,7 +32,20 @@ function selfReply(message) {
     .then(function () {
       message_container.lastElementChild.scrollIntoView();
     });
-}
+    if (message.toLowerCase() === "roasty") {
+      document.body.classList.add("background-roasty");
+      
+    }
+    if (message.toLowerCase() === "brewster") {
+      document.body.classList.add("background-brewster");
+  
+    }
+    if (message.toLowerCase() === "joe") {
+      document.body.classList.add("background-joe");
+        
+     }
+    }
+
 
 function botReady() {
   bot.sortReplies();
@@ -41,3 +54,4 @@ function botReady() {
 function botNotReady(err) {
   console.log("An error has occurred.", err);
 }
+

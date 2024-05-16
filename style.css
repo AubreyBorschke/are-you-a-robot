@@ -2,7 +2,8 @@
 
 
 body {
-  background: rgb(255, 253, 205);
+  background: #ffc2c2;
+  transition: background 0.5s ease;
 }
 
 .title {
@@ -18,7 +19,7 @@ body {
 
 .title h1 {
   letter-spacing: 0.75px;
-  color: rgb(143, 159, 233);
+  color: #ed8787;
 }
 
 .wrapper {
@@ -27,9 +28,7 @@ body {
 
 .chat {
   background: #ffffff;
-  box-shadow: 10px 10px 0px; 
   overflow: scroll;
-  color: rgb(143, 159, 233);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -62,7 +61,7 @@ body {
 .messages .bot {
   text-align: left;
   margin-right: auto;
-  color: rgb(143, 159, 233);
+  color: #ed8787;
   font-size: 15pt;
 }
 
@@ -70,7 +69,7 @@ body {
   text-align: right;
   margin-right: 20px;
   margin-left: auto;
-  background: rgb(143, 159, 233);
+  background: #ed8787;
   border: 1px solid rgb(255, 255, 255);
   color:  rgb(255, 255, 255);
 }
@@ -91,7 +90,7 @@ body {
   outline: 0;
   border-top: 0px;
   border-right: 0px;
-  border-bottom: 2px solid rgb(143, 159, 233);;
+  border-bottom: 2px solid #ed8787;;
   border-left: 0px;
 }
 
@@ -125,7 +124,7 @@ input:focus {
   font-style: italic;
   display: inline-block;
   margin-top: 5px; 
-  background: rgb(143, 159, 233);
+  background: #ed8787;
   padding: 5px;
   border-radius: 5px;
 }
@@ -151,4 +150,22 @@ img {
   list-style-type: circle;
   display: inline-block;
   
+}
+
+.background-roasty {
+  background-image: url('backgrounds/roastybackground.png'); /* Path to your image */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.background-brewster {
+  background-image: url('backgrounds/brewsterbackground.png'); /* Path to your image */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.background-joe {
+  background-image: url('backgrounds/joebackground.png'); /* Path to your image */
+  background-size: cover;
+  background-repeat: no-repeat;
 }

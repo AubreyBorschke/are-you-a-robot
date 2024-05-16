@@ -1,19 +1,16 @@
 ! version = 2.0
 
-+ [*] (hi|hello|yo|hey) [*] {topic=intro}
++ [*] (hi|hello|yo|hey) [*] 
+- hi there! welcome to the wellness cafe! which coffee do you think fits you best today?
+^ <image src="/images/joe.png">
+^ <span class="intro_name">joe:(</span>
+^ <image src="/images/brewster.png">
+^ <span class="intro_name">brewster:/</span>
+^ <image src="/images/roasty.png">
+^ <span class="intro_name">roasty:)</span>\n
+^ all of our coffee is more than welcome to talk to u abt ur day! 
+^ <span class="action"> Select a cup by typing their name</span>
 
-> topic intro
-    - hi there! welcome to the wellness cafe! which coffee do you think fits you best today?
-    ^ <image src="/images/joe.png">
-    ^ <span class="intro_name">joe:(</span>
-    ^ <image src="/images/brewster.png">
-    ^ <span class="intro_name">brewster:/</span>
-    ^ <image src="/images/roasty.png">
-    ^ <span class="intro_name">roasty:)</span>\n
-    ^ all of our coffee is more than welcome to talk to u abt ur day! 
-    ^ <span class="action"> Select a cup by typing their name</span>
-
-< topic 
 
 + [*] joe [*]
 - hi! my name is joe. what is your name? {topic=joe}
@@ -129,6 +126,16 @@
     - <image src="/animalimages/youmatter.png">
     - <image src="/animalimages/yolo.png">
 
+    +6
+% i am sorry to hear that it is totally normal to feel a bit down i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
+    - <image src="/images/inspiring/inspiring1.jpg">
+    - <image src="/images/inspiring/inspiring2.jpg">
+    - <image src="/images/inspiring/inspiring3.jpg">
+    - <image src="/images/inspiring/inspiring4.jpg">
+    - <image src="/images/inspiring/inspiring5.jpg">
+    - <image src="/images/inspiring/inspiring6.jpg">
+
+
 
     + *
     % [*] do you like this [*]span classaction reply with yes or nospan
@@ -238,6 +245,9 @@
    % [*] make you feel [*]
    - i don't think you're overthinking or overreacting at all! even if you think you are, it's completely okay to do so. i recommend you find an activity that may keep your mind off the topic, such as baking or doodling.
 
+   +[*] (die|kms|kill|hurt|jump off a cliff|harm) [*]
+   -if you are having suicidal thoughts and are in need of help, please speak with a professional. joe, brewster, and roasty are not professionals. there are several 24 hour hotlines that can help much better than our coffee mugs <3 we love you tho and hope you get help <3>>
+
 //DISTRACT
     + 1
     % i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
@@ -340,30 +350,29 @@
 
     + *
     % nice to meet you * i heard you woke up ready to take on the day want to make your day even betterspan classaction reply with yes or nospan
-    * <star> == yes => woohooooo!! making your day 10000000% BETTER! incoming: funny images! {random}
-    ^ <image src="/images/goosebubbles.jpg">|
-    ^ <image src="/images/cattongue.jpg">|
-    ^ <image src="/images/vampiredog.jpg">|
-    ^ <image src="/images/ducksunglasses.jpg">|
-    ^ <image src="/images/yolo swag.jpg"> {/random}
+    * <star> == yes => woohooooo!! making your day 10000000% better! incoming: funny images! {random}
+    ^ <image src="/animalimages/goosebubbles.jpg">|
+    ^ <image src="/animalimages/cattongue.jpg">|
+    ^ <image src="/animalimages/vampiredog.jpg">|
+    ^ <image src="/animalimages/ducksunglasses.jpg">|
+    ^ <image src="/animalimages/yolo swag.jpg"> {/random}
     ^ would you like a new image?
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     * <star> == no => that is the wrong response! silly goose! incoming: funny images! {random}
-    ^ <image src="/images/goosebubbles.jpg">|
-    ^ <image src="/images/ducksunglasses.jpg">|
-    ^ <image src="/images/cattongue.jpg">|
-    ^ <image src="/images/vampiredog.jpg">|
-    ^ <image src="/images/yolo swag.jpg"> {/random}
+    ^ <image src="/animalimages/goosebubbles.jpg">|
+    ^ <image src="/animalimages/ducksunglasses.jpg">|
+    ^ <image src="/animalimages/cattongue.jpg">|
+    ^ <image src="/animalimages/vampiredog.jpg">|
+    ^ <image src="/animalimages/yolo swag.jpg"> {/random}
     
-
     + *
     % woohooooo making your day 10000000 better incoming funny images image src*would you like a new imagespan classaction reply with yes or nospan
     * <star> == yes => new image generating...{random}
-    ^ <image src="/images/goosebubbles.jpg">|
-    ^ <image src="/images/cattongue.jpg">|
-    ^ <image src="/images/ducksunglasses.jpg">|
-    ^ <image src="/images/vampiredog.jpg">|
-    ^ <image src="/images/yolo swag.jpg"> {/random}
+    ^ <image src="/animalimages/goosebubbles.jpg">|
+    ^ <image src="/animalimages/cattongue.jpg">|
+    ^ <image src="/animalimages/ducksunglasses.jpg">|
+    ^ <image src="/animalimages/vampiredog.jpg">|
+    ^ <image src="/animalimages/yolo swag.jpg"> {/random}
     ^ would you like a new image?
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     * <star> == no => enjoy!!!!!! hope the rest of your day is SPLENDID!!!!
@@ -371,11 +380,11 @@
     + *
     % new image generatingimage src*would you like a new imagespan classaction reply with yes or nospan
     * <star> == yes => new image generating...{random}
-    ^ <image src="/images/goosebubbles.jpg">|
-    ^ <image src="/images/cattongue.jpg">|
-    ^ <image src="/images/vampiredog.jpg">|
-    ^ <image src="/images/ducksunglasses.jpg">|
-    ^ <image src="/images/yolo swag.jpg"> {/random}
+    ^ <image src="/animalimages/goosebubbles.jpg">|
+    ^ <image src="/animalimages/cattongue.jpg">|
+    ^ <image src="/animalimages/vampiredog.jpg">|
+    ^ <image src="/animalimages/ducksunglasses.jpg">|
+    ^ <image src="/animalimages/yolo swag.jpg"> {/random}
     ^ would you like a new image?
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     * <star> == no => hooray!!!!!! hope the rest of your day is as AMAZING as you are!!!!
