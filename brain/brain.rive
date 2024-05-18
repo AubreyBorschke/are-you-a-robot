@@ -2,13 +2,21 @@
 
 + [*] (hi|hello|yo|hey) [*] 
 - hi there! welcome to the wellness cafe! which coffee do you think fits you best today?
-^ <image src="/images/joe.png">
-^ <span class="intro_name">joe:(</span>
-^ <image src="/images/brewster.png">
-^ <span class="intro_name">brewster:/</span>
-^ <image src="/images/roasty.png">
-^ <span class="intro_name">roasty:)</span>\n
-^ all of our coffee is more than welcome to talk to u abt ur day! 
+^ <span class="cups-wrapper">
+^   <span>
+^     <image src="/images/joe.png">
+^     <span class="intro_name">joe</span>
+^   </span>
+^   <span>
+^     <image src="/images/brewster.png">
+^     <span class="intro_name">brewster</span>
+^   </span>
+^   <span>
+^     <image src="/images/roasty.png">
+^     <span class="intro_name">roasty</span>\n
+^   </span>
+^ </span>
+^ all of our coffee is more than welcome to talk to u abt ur day!
 ^ <span class="action"> Select a cup by typing their name</span>
 
 
@@ -33,59 +41,12 @@
     + *
     % nice to meet you * i heard you woke up feeling pretty shit would you like to vent about what has been upsetting you or would you prefer to distract yourselfspan classaction reply with vent or distractspan
     * <star> == vent => go for it, i'm listening. 
-    * <star> == distract => i am sorry to hear that. it is totally normal to feel a bit down. i can suggest some activities for you to do that will hopefully cheer you up. which category of activities sounds the best to you: outdoor activities (1), indoor activities (2), creative activities (3), social activities (4), or images! (5)
-
-
-//VENT
-   + *
-   % go for it [*]
-   - ok, tell me more.
-   - and then what happened?
-   - hmmm... say more to that
-  
-   + *
-   % ok tell me more
-   - oh no! i'm so very sorry that happened to you. how does this make you feel?
-   - aw man, that sucks. how did that make you feel?
-
-   + *
-   % and then what happened
-   - yikes! that's not good, i'm sorry that happened. how did this make you feel?
-   - oh dear, i'm sorry my friend! how did that make you feel?
-  
-   + *
-   % hmmm say more to that
-   - oh no! that sucks, i'm sorry. how does that make you feel?
-   - aw, that's tough. i'm sorry you had to go through that. how did that make you feel?
-
-   + [*] (angry|frustrated|upset|agitated|enraged) [*]
-   % [*] make you feel [*]
-   - i'm sorry you're feeling upset. i don't blame you for feeling that way.
-
-   + [*] (sad|down|unhappy|depressed|miserable|rejected|sorrowful|awful|regretful|sucks) [*]
-   % [*] make you feel [*]
-   - i'm really sorry to hear that you're feeling like this right now. it sounds like you're going through a tough time, and that does suck.
-   - it's completely normal to feel this way given what you're going through. your feelings are valid, and it's okay to take some time to process them.
-
-   + [*] (confused|lost|distant|cold|dry|emotionless|numb|unclear|uncertain) [*]
-   % [*] make you feel [*]
-   - feeling confused is completely normal, especially when faced with challenging situations such as the one you're in. take your time to sort through your thoughts. it might help to jot down those thoughts into a journal or notebook!
-   - it's okay to feel uncertain or unclear about things. sometimes, taking a step back and giving yourself some space can help bring clarity to your situation.
-   - if you're feeling overwhelmed by confusion, it might be helpful to take a break and engage in activities that bring you peace or clarity. remember, you don't have to figure out everything all at once! take things one step at a time.
-
-   + [*] (annoyed|irritated|exasperated|overwhelmed) [*]
-   % [*] make you feel [*]
-   - feeling annoyed is totally understandable, especially when things don't go as planned. take a deep breath, and step back. give yourself some space.
-   - i can tell that you're annoyed or overwhelmed, and i want you to know that it's okay to feel that way. i recommend that you step back. if you feel like you want to express yourself, take a deep breath and have a calm conversation expressing your feelings to whoever or whatever is making you annoyed. being aggressive isn't the answer!
-  
-   + [*] (overreacting|overthinking) [*]
-   % [*] make you feel [*]
-   - i don't think you're overthinking or overreacting at all! even if you think you are, it's completely okay to do so. i recommend you find an activity that may keep your mind off the topic, such as baking or doodling.
+    * <star> == distract => i am sorry to hear that. it is totally normal to feel a bit down. i can suggest some activities for you to do that will hopefully cheer you up. which category of activities sounds the best to you: outdoor activities (1), indoor activities (2), creative activities (3), social activities (4), animal images (5), or inspiring quotes (6)
 
 //DISTRACT
 
     + 1
-    % i am sorry to hear that it is totally normal to feel a bit down i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
+    % i am sorry to hear that it is totally normal to feel a bit down i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 animal images 5 or inspiring quotes devil
     - go on a walk. do you like this activity?
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     - sit outside and read a book. do you like this activity?
@@ -94,7 +55,7 @@
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     
     + 2
-    % i am sorry to hear that it is totally normal to feel a bit down i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
+    % i am sorry to hear that it is totally normal to feel a bit down i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 animal images 5 or inspiring quotes devil
     - do some cooking or baking! try some new recipes or bake some treats. do you like this activity?
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     - put together a puzzle. do you like this activity?
@@ -103,7 +64,7 @@
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     
     + 3
-    % i am sorry to hear that it is totally normal to feel a bit down i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
+    % i am sorry to hear that it is totally normal to feel a bit down i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 animal images 5 or inspiring quotes devil
     - do some painting or drawing. express and release your feelings through some art! do you like this activity?
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     - grab a notebook, and start a journal, blog, or write some short stories! do you like this activity?
@@ -112,39 +73,65 @@
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     
     + 4
-    % i am sorry to hear that it is totally normal to feel a bit down i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
+    % i am sorry to hear that it is totally normal to feel a bit down i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 animal images 5 or inspiring quotes devil
     - check out live or local events in your city. there could be concerts, sports events, or theater performances. even better, take some friends! do you like this activity?
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     - discover and join a local club that aligns with your interests (like a book club or gaming club). do you like this activity?
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     
     + 5
-    % i am sorry to hear that it is totally normal to feel a bit down i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
-    - <image src="/animalimages/IMG_3663.jpg">
-    - <image src="/animalimages/hugs.png">
-    - <image src="/animalimages/duck.png">
-    - <image src="/animalimages/youmatter.png">
-    - <image src="/animalimages/yolo.png">
+    % i am sorry to hear that it is totally normal to feel a bit down i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 animal images 5 or inspiring quotes devil
+    - <image src="/images/animalimages/a1.jpg">
+    - <image src="/images/animalimages/a2.jpg">
+    - <image src="/images/animalimages/a3.jpg">
+    - <image src="/images/animalimages/a4.jpg">
+    - <image src="/images/animalimages/a5.jpg">
+    - <image src="/images/animalimages/a6.jpg">
+    - <image src="/images/animalimages/a7.jpg">
+    - <image src="/images/animalimages/a8.jpg">
+    - <image src="/images/animalimages/a9.jpg">
+    - <image src="/images/animalimages/a10.jpg">
+    - <image src="/images/animalimages/a11.jpg">
+    - <image src="/images/animalimages/a12.jpg">
+    - <image src="/images/animalimages/a13.jpg">
+    - <image src="/images/animalimages/a14.jpg">
+    - <image src="/images/animalimages/a15.jpg">
+    - <image src="/images/animalimages/a16.jpg">
 
-    +6
-% i am sorry to hear that it is totally normal to feel a bit down i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
+    + 6
+    % i am sorry to hear that it is totally normal to feel a bit down i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 animal images 5 or inspiring quotes devil
     - <image src="/images/inspiring/inspiring1.jpg">
     - <image src="/images/inspiring/inspiring2.jpg">
     - <image src="/images/inspiring/inspiring3.jpg">
     - <image src="/images/inspiring/inspiring4.jpg">
     - <image src="/images/inspiring/inspiring5.jpg">
     - <image src="/images/inspiring/inspiring6.jpg">
-
-
+    - <image src="/images/inspiring/inspiring7.jpg">
+    - <image src="/images/inspiring/inspiring8.jpg">
+    - <image src="/images/inspiring/inspiring9.jpg">
+    - <image src="/images/inspiring/inspiring10.jpg">
+    - <image src="/images/inspiring/inspiring11.jpg">
+    - <image src="/images/inspiring/inspiring12.jpg">
+    - <image src="/images/inspiring/inspiring13.jpg">
+    - <image src="/images/inspiring/inspiring14.jpg">
+    - <image src="/images/inspiring/inspiring15.jpg">
+    - <image src="/images/inspiring/inspiring16.jpg">
+    - <image src="/images/inspiring/inspiring17.jpg">
+    - <image src="/images/inspiring/inspiring18.jpg">
+    - <image src="/images/inspiring/inspiring20.jpg">
+    - <image src="/images/inspiring/inspiring21.jpg">
+    - <image src="/images/inspiring/inspiring22.jpg">
+    - <image src="/images/inspiring/inspiring23.jpg">
+    - <image src="/images/inspiring/inspiring24.jpg">
 
     + *
-    % [*] do you like this [*]span classaction reply with yes or nospan
+    % * do you like this * span classaction reply with yes or nospan
     * <star> == yes => perf! go have fun! hope you feel better :)
-    * <star> == no => okay no worries, type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category: outdoor activities (1), indoor activities (2), creative activities (3), social activities (4), or images! (5)
+    * <star> == no => okay no worries, type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category: outdoor activities (1), indoor activities (2), creative activities (3), social activities (4), animal images (5), or inspiring quotes (6)
     - just a yes or no response plz!
 
     + 1
-    % okay no worries type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
+    % okay no worries type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 animal images 5 or inspiring quotes devil
     - go on a walk. do you like this activity?
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     - sit outside and read a book. do you like this activity?
@@ -153,7 +140,7 @@
     ^ <span class="action"> Reply with 'yes' or 'no'</span>
 
     + 2
-    % okay no worries type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
+    % okay no worries type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 animal images 5 or inspiring quotes devil
     - do some cooking or baking! try some new recipes or bake some treats. do you like this activity?
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     - put together a puzzle. do you like this activity?
@@ -162,7 +149,7 @@
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     
     + 3
-    % okay no worries type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
+    % okay no worries type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 animal images 5 or inspiring quotes devil
     - do some painting or drawing. express and release your feelings through some art! do you like this activity?
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     - grab a notebook, and start a journal, blog, or write some short stories! do you like this activity?
@@ -171,19 +158,146 @@
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     
     + 4
-    % okay no worries type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
+    % okay no worries type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 animal images 5 or inspiring quotes devil
     - check out live or local events in your city. there could be concerts, sports events, or theater performances. even better, take some friends! do you like this activity?
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     - discover and join a local club that aligns with your interests (like a book club or gaming club). do you like this activity?
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     
     + 5
-    % okay no worries type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
-    - <image src="/animalimages/IMG_3663.jpg">
-    - <image src="/animalimages/hugs.png">
-    - <image src="/animalimages/duck.png">
-    - <image src="/animalimages/youmatter.png">
-    - <image src="/animalimages/yolo.png">
+    % okay no worries type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 animal images 5 or inspiring quotes devil
+    - <image src="/images/animalimages/a1.jpg">
+    - <image src="/images/animalimages/a2.jpg">
+    - <image src="/images/animalimages/a3.jpg">
+    - <image src="/images/animalimages/a4.jpg">
+    - <image src="/images/animalimages/a5.jpg">
+    - <image src="/images/animalimages/a6.jpg">
+    - <image src="/images/animalimages/a7.jpg">
+    - <image src="/images/animalimages/a8.jpg">
+    - <image src="/images/animalimages/a9.jpg">
+    - <image src="/images/animalimages/a10.jpg">
+    - <image src="/images/animalimages/a11.jpg">
+    - <image src="/images/animalimages/a12.jpg">
+    - <image src="/images/animalimages/a13.jpg">
+    - <image src="/images/animalimages/a14.jpg">
+    - <image src="/images/animalimages/a15.jpg">
+    - <image src="/images/animalimages/a16.jpg">
+
+    + 6
+    % okay no worries type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 animal images 5 or inspiring quotes devil
+    - <image src="/images/inspiring/inspiring1.jpg">
+    - <image src="/images/inspiring/inspiring2.jpg">
+    - <image src="/images/inspiring/inspiring3.jpg">
+    - <image src="/images/inspiring/inspiring4.jpg">
+    - <image src="/images/inspiring/inspiring5.jpg">
+    - <image src="/images/inspiring/inspiring6.jpg">
+    - <image src="/images/inspiring/inspiring7.jpg">
+    - <image src="/images/inspiring/inspiring8.jpg">
+    - <image src="/images/inspiring/inspiring9.jpg">
+    - <image src="/images/inspiring/inspiring10.jpg">
+    - <image src="/images/inspiring/inspiring11.jpg">
+    - <image src="/images/inspiring/inspiring12.jpg">
+    - <image src="/images/inspiring/inspiring13.jpg">
+    - <image src="/images/inspiring/inspiring14.jpg">
+    - <image src="/images/inspiring/inspiring15.jpg">
+    - <image src="/images/inspiring/inspiring16.jpg">
+    - <image src="/images/inspiring/inspiring17.jpg">
+    - <image src="/images/inspiring/inspiring18.jpg">
+    - <image src="/images/inspiring/inspiring20.jpg">
+    - <image src="/images/inspiring/inspiring21.jpg">
+    - <image src="/images/inspiring/inspiring22.jpg">
+    - <image src="/images/inspiring/inspiring23.jpg">
+    - <image src="/images/inspiring/inspiring24.jpg">
+
+
+//VENT
+
+   + [*] (angry|frustrated|upset|agitated|enraged|mad|pissed|furious|offended|outraged) [*]
+   - i'm sorry you're feeling upset. i don't blame you for feeling that way. do you feel better after you talked about it?
+
+   + [*] (sad|down|unhappy|depressed|miserable|rejected|sorrowful|awful|regretful|sucks) [*]
+   - i'm really sorry to hear that you're feeling like this right now. it sounds like you're going through a tough time, and that does suck. do you feel better after you talked about it?
+   - it's completely normal to feel this way given what you're going through. your feelings are valid, and it's okay to take some time to process them. do you feel better after you talked about it?
+
+   + [*] (confused|lost|distant|cold|dry|emotionless|numb|unclear|uncertain) [*]
+   - feeling confused is completely normal, especially when faced with challenging situations such as the one you're in. take your time to sort through your thoughts. it might help to jot down those thoughts into a journal or notebook! do you feel better after you talked about it?
+   - it's okay to feel uncertain or unclear about things. sometimes, taking a step back and giving yourself some space can help bring clarity to your situation. do you feel better after you talked about it?
+   - if you're feeling overwhelmed by confusion, it might be helpful to take a break and engage in activities that bring you peace or clarity. remember, you don't have to figure out everything all at once! take things one step at a time. do you feel better after you talked about it?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+
+   + [*] (annoyed|irritated|exasperated|overwhelmed) [*]
+   - feeling annoyed is totally understandable, especially when things don't go as planned. take a deep breath, and step back. give yourself some space. do you feel better after you talked about it?
+   - i can tell that you're annoyed or overwhelmed, and i want you to know that it's okay to feel that way. i recommend that you step back. if you feel like you want to express yourself, take a deep breath and have a calm conversation expressing your feelings to whoever or whatever is making you annoyed. being aggressive isn't the answer! do you feel better after you talked about it?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+
+   + [*] (overreacting|overthinking) [*]
+   - i don't think you're overthinking or overreacting at all! even if you think you are, it's completely okay to do so. i recommend you find an activity that may keep your mind off the topic, such as baking or doodling. do you feel better after you talked about it?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+
+    + [*] (offended|hurt|betrayed|cheated) [*]
+    - they did what?!?!?! do you feel better after you talked about it?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+
+    + [*] (die|kms|kill|hurt|harm|suicidal) [*]
+    - if you are having suicidal thoughts and are in need of help, please speak with a professional. joe, brewster, and roasty are sadly not professionals. there are several 24 hour hotlines that can help much better than our coffee mugs <3 we love you tho and hope you get help <3 do you feel better after you talked about it?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+
+    + [*] (dick|asshole|fuck|fucker|bitch|motherfucker|twat|cunt|imbecile|asshat|whore|hoe|slut|shit|shithole|meanie) [*]
+    - wooaahhh language!!!! but ill let it slide because ur not wrong.. do you feel better after you talked about it?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+
+    + *
+    % * do you feel better after you talked about itspan action reply with yes or nospan
+    * <star> == yes => YAY!
+    ^ <image src="/images/animalimages/a1.jpg">|
+    ^ <image src="/images/animalimages/a2.jpg">|
+    ^ <image src="/images/animalimages/a3.jpg">|
+    ^ <image src="/images/animalimages/a4.jpg">|
+    ^ <image src="/images/animalimages/a5.jpg">|
+    ^ <image src="/images/animalimages/a6.jpg">|
+    ^ <image src="/images/animalimages/a7.jpg">|
+    ^ <image src="/images/animalimages/a8.jpg">|
+    ^ <image src="/images/animalimages/a9.jpg">|
+    ^ <image src="/images/animalimages/a10.jpg">|
+    ^ <image src="/images/animalimages/a11.jpg">|
+    ^ <image src="/images/animalimages/a12.jpg">|
+    ^ <image src="/images/animalimages/a13.jpg">|
+    ^ <image src="/images/animalimages/a14.jpg">|
+    ^ <image src="/images/animalimages/a15.jpg">|
+    ^ <image src="/images/animalimages/a16.jpg"> {/random}
+    ^ new image?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+
+    * <star> == no => would you like a distraction?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+
+    + *
+    % would you like a distractionspan classaction reply with yes or nospan
+    - okay no worries, type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category: outdoor activities (1), indoor activities (2), creative activities (3), social activities (4), animal images (5), or inspiring quotes (6)
+    
+    + *
+    % yay image src*new imagespan classaction reply with yes or nospan
+    * <star> == yes => new image generating...{random}
+    ^ <image src="/images/animalimages/a1.jpg">|
+    ^ <image src="/images/animalimages/a2.jpg">|
+    ^ <image src="/images/animalimages/a3.jpg">|
+    ^ <image src="/images/animalimages/a4.jpg">|
+    ^ <image src="/images/animalimages/a5.jpg">|
+    ^ <image src="/images/animalimages/a6.jpg">|
+    ^ <image src="/images/animalimages/a7.jpg">|
+    ^ <image src="/images/animalimages/a8.jpg">|
+    ^ <image src="/images/animalimages/a9.jpg">|
+    ^ <image src="/images/animalimages/a10.jpg">|
+    ^ <image src="/images/animalimages/a11.jpg">|
+    ^ <image src="/images/animalimages/a12.jpg">|
+    ^ <image src="/images/animalimages/a13.jpg">|
+    ^ <image src="/images/animalimages/a14.jpg">|
+    ^ <image src="/images/animalimages/a15.jpg">|
+    ^ <image src="/images/animalimages/a16.jpg">{/random}
+    ^ new image?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+    * <star> == no => okay, i hope you feel better! live love laugh! yolo :-)
+
 
 < topic 
 
@@ -195,62 +309,14 @@
     ^ <span class="action"> Reply with 'vent' or 'distract'</span> 
 
     + *
-    % nice to meet you * i heard you woke up feeling meh would you like to vent about what has been bothering you or would you prefer to distract yourselfspan classaction reply with vent or distractspan
+    % nice to meet you * i heard you woke up feeling meh [*]
     * <star> == vent => go for it, i'm listening. 
-    * <star> == distract => i can suggest some activities for you to do that will hopefully cheer you up! which category of activities sounds the best to you: outdoor activities (1), indoor activities (2), creative activities (3), social activities (4), or images! (5)
-    
- //VENT
-    + *
-   % go for it [*]
-   - ok, tell me more.
-   - and then what happened?
-   - hmmm... say more to that
-  
-   + *
-   % ok tell me more
-   - oh no! i'm so very sorry that happened to you. how does this make you feel?
-   - aw man, that sucks. how did that make you feel?
-
-   + *
-   % and then what happened
-   - yikes! that's not good, i'm sorry that happened. how did this make you feel?
-   - oh dear, i'm sorry my friend! how did that make you feel?
-  
-   + *
-   % hmmm say more to that
-   - oh no! that sucks, i'm sorry. how does that make you feel?
-   - aw, that's tough. i'm sorry you had to go through that. how did that make you feel?
-
-   + [*] (angry|frustrated|upset|agitated|enraged) [*]
-   % [*] make you feel [*]
-   - i'm sorry you're feeling upset. i don't blame you for feeling that way.
-
-   + [*] (sad|down|unhappy|depressed|miserable|rejected|sorrowful|awful|regretful|sucks) [*]
-   % [*] make you feel [*]
-   - i'm really sorry to hear that you're feeling like this right now. it sounds like you're going through a tough time, and that does suck.
-   - it's completely normal to feel this way given what you're going through. your feelings are valid, and it's okay to take some time to process them.
-
-   + [*] (confused|lost|distant|cold|dry|emotionless|numb|unclear|uncertain) [*]
-   % [*] make you feel [*]
-   - feeling confused is completely normal, especially when faced with challenging situations such as the one you're in. take your time to sort through your thoughts. it might help to jot down those thoughts into a journal or notebook!
-   - it's okay to feel uncertain or unclear about things. sometimes, taking a step back and giving yourself some space can help bring clarity to your situation.
-   - if you're feeling overwhelmed by confusion, it might be helpful to take a break and engage in activities that bring you peace or clarity. remember, you don't have to figure out everything all at once! take things one step at a time.
-
-   + [*] (annoyed|irritated|exasperated|overwhelmed) [*]
-   % [*] make you feel [*]
-   - feeling annoyed is totally understandable, especially when things don't go as planned. take a deep breath, and step back. give yourself some space.
-   - i can tell that you're annoyed or overwhelmed, and i want you to know that it's okay to feel that way. i recommend that you step back. if you feel like you want to express yourself, take a deep breath and have a calm conversation expressing your feelings to whoever or whatever is making you annoyed. being aggressive isn't the answer!
-  
-   + [*] (overreacting|overthinking) [*]
-   % [*] make you feel [*]
-   - i don't think you're overthinking or overreacting at all! even if you think you are, it's completely okay to do so. i recommend you find an activity that may keep your mind off the topic, such as baking or doodling.
-
-   +[*] (die|kms|kill|hurt|jump off a cliff|harm) [*]
-   -if you are having suicidal thoughts and are in need of help, please speak with a professional. joe, brewster, and roasty are not professionals. there are several 24 hour hotlines that can help much better than our coffee mugs <3 we love you tho and hope you get help <3>>
+    * <star> == distract => i can suggest some activities for you to do that will hopefully cheer you up! which category of activities sounds the best to you: outdoor activities (1), indoor activities (2), creative activities (3), social activities (4), animal images (5), or inspiring quotes (6)
+    - default
 
 //DISTRACT
     + 1
-    % i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
+    % i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 animal images 5 or inspiring quotes devil
     - go on a walk. do you like this activity?
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     - sit outside and read a book. do you like this activity?
@@ -259,7 +325,7 @@
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     
     + 2
-    % i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
+    % i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 animal images 5 or inspiring quotes devil
     - do some cooking or baking! try some new recipes or bake some treats. do you like this activity?
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     - put together a puzzle. do you like this activity?
@@ -268,7 +334,7 @@
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     
     + 3
-    % i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
+    % i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 animal images 5 or inspiring quotes devil
     - do some painting or drawing. express and release your feelings through some art! do you like this activity?
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     - grab a notebook, and start a journal, blog, or write some short stories! do you like this activity?
@@ -277,28 +343,69 @@
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     
     + 4
-    % i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
+    % i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 animal images 5 or inspiring quotes devil
     - check out live or local events in your city. there could be concerts, sports events, or theater performances. even better, take some friends! do you like this activity?
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     - discover and join a local club that aligns with your interests (like a book club or gaming club). do you like this activity?
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     
     + 5
-    % i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
-    - <image src="/animalimages/IMG_3663.jpg">
-    - <image src="/animalimages/hugs.png">
-    - <image src="/animalimages/duck.png">
-    - <image src="/animalimages/youmatter.png">
-    - <image src="/animalimages/yolo.png">
+    % i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 animal images 5 or inspiring quotes devil
+    - <image src="/images/animalimages/a1.jpg">
+    - <image src="/images/animalimages/a2.jpg">
+    - <image src="/images/animalimages/a3.jpg">
+    - <image src="/images/animalimages/a4.jpg">
+    - <image src="/images/animalimages/a5.jpg">
+    - <image src="/images/animalimages/a6.jpg">
+    - <image src="/images/animalimages/a7.jpg">
+    - <image src="/images/animalimages/a8.jpg">
+    - <image src="/images/animalimages/a9.jpg">
+    - <image src="/images/animalimages/a10.jpg">
+    - <image src="/images/animalimages/a11.jpg">
+    - <image src="/images/animalimages/a12.jpg">
+    - <image src="/images/animalimages/a13.jpg">
+    - <image src="/images/animalimages/a14.jpg">
+    - <image src="/images/animalimages/a15.jpg">
+    - <image src="/images/animalimages/a16.jpg">
+
+
+
+    + 6
+    % i can suggest some activities for you to do that will hopefully cheer you up which category of activities sounds the best to you outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 animal images 5 or inspiring quotes devil
+    - <image src="/images/inspiring/inspiring1.jpg">
+    - <image src="/images/inspiring/inspiring2.jpg">
+    - <image src="/images/inspiring/inspiring3.jpg">
+    - <image src="/images/inspiring/inspiring4.jpg">
+    - <image src="/images/inspiring/inspiring5.jpg">
+    - <image src="/images/inspiring/inspiring6.jpg">
+    - <image src="/images/inspiring/inspiring7.jpg">
+    - <image src="/images/inspiring/inspiring8.jpg">
+    - <image src="/images/inspiring/inspiring9.jpg">
+    - <image src="/images/inspiring/inspiring10.jpg">
+    - <image src="/images/inspiring/inspiring11.jpg">
+    - <image src="/images/inspiring/inspiring12.jpg">
+    - <image src="/images/inspiring/inspiring13.jpg">
+    - <image src="/images/inspiring/inspiring14.jpg">
+    - <image src="/images/inspiring/inspiring15.jpg">
+    - <image src="/images/inspiring/inspiring16.jpg">
+    - <image src="/images/inspiring/inspiring17.jpg">
+    - <image src="/images/inspiring/inspiring18.jpg">
+    - <image src="/images/inspiring/inspiring20.jpg">
+    - <image src="/images/inspiring/inspiring21.jpg">
+    - <image src="/images/inspiring/inspiring22.jpg">
+    - <image src="/images/inspiring/inspiring23.jpg">
+    - <image src="/images/inspiring/inspiring24.jpg">
+
+
 
     + *
-    % [*] do you like this [*]span classaction reply with yes or nospan
+    % * do you like this * span classaction reply with yes or nospan
     * <star> == yes => perf! go have fun! hope you feel better :)
-    * <star> == no => okay no worries, type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category: outdoor activities (1), indoor activities (2), creative activities (3), social activities (4), or images! (5)
+    * <star> == no => okay no worries, type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category: outdoor activities (1), indoor activities (2), creative activities (3), social activities (4), animal images (5), or inspiring quotes (6)
     - just a yes or no response plz!
 
     + 1
-    % okay no worries type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
+    % okay no worries type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 animal images 5 or inspiring quotes devil
     - go on a walk. do you like this activity?
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     - sit outside and read a book. do you like this activity?
@@ -307,7 +414,7 @@
     ^ <span class="action"> Reply with 'yes' or 'no'</span>
 
     + 2
-    % okay no worries type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
+    % okay no worries type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 animal images 5 or inspiring quotes devil
     - do some cooking or baking! try some new recipes or bake some treats. do you like this activity?
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     - put together a puzzle. do you like this activity?
@@ -316,7 +423,7 @@
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     
     + 3
-    % okay no worries type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
+    % okay no worries type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 animal images 5 or inspiring quotes devil
     - do some painting or drawing. express and release your feelings through some art! do you like this activity?
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     - grab a notebook, and start a journal, blog, or write some short stories! do you like this activity?
@@ -325,19 +432,144 @@
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     
     + 4
-    % okay no worries type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
+    % okay no worries type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 animal images 5 or inspiring quotes devil
     - check out live or local events in your city. there could be concerts, sports events, or theater performances. even better, take some friends! do you like this activity?
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     - discover and join a local club that aligns with your interests (like a book club or gaming club). do you like this activity?
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     
     + 5
-    % okay no worries type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 or images 5
-    - <image src="/animalimages/IMG_3663.jpg">
-    - <image src="/animalimages/hugs.png">
-    - <image src="/animalimages/duck.png">
-    - <image src="/animalimages/youmatter.png">
-    - <image src="/animalimages/yolo.png">
+    % okay no worries type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 animal images 5 or inspiring quotes devil
+    - <image src="/images/animalimages/a1.jpg">
+    - <image src="/images/animalimages/a2.jpg">
+    - <image src="/images/animalimages/a3.jpg">
+    - <image src="/images/animalimages/a4.jpg">
+    - <image src="/images/animalimages/a5.jpg">
+    - <image src="/images/animalimages/a6.jpg">
+    - <image src="/images/animalimages/a7.jpg">
+    - <image src="/images/animalimages/a8.jpg">
+    - <image src="/images/animalimages/a9.jpg">
+    - <image src="/images/animalimages/a10.jpg">
+    - <image src="/images/animalimages/a11.jpg">
+    - <image src="/images/animalimages/a12.jpg">
+    - <image src="/images/animalimages/a13.jpg">
+    - <image src="/images/animalimages/a14.jpg">
+    - <image src="/images/animalimages/a15.jpg">
+    - <image src="/images/animalimages/a16.jpg">
+
+    + 6
+    % okay no worries type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category outdoor activities 1 indoor activities 2 creative activities 3 social activities 4 animal images 5 or inspiring quotes devil
+    - <image src="/images/inspiring/inspiring1.jpg">
+    - <image src="/images/inspiring/inspiring2.jpg">
+    - <image src="/images/inspiring/inspiring3.jpg">
+    - <image src="/images/inspiring/inspiring4.jpg">
+    - <image src="/images/inspiring/inspiring5.jpg">
+    - <image src="/images/inspiring/inspiring6.jpg">
+    - <image src="/images/inspiring/inspiring7.jpg">
+    - <image src="/images/inspiring/inspiring8.jpg">
+    - <image src="/images/inspiring/inspiring9.jpg">
+    - <image src="/images/inspiring/inspiring10.jpg">
+    - <image src="/images/inspiring/inspiring11.jpg">
+    - <image src="/images/inspiring/inspiring12.jpg">
+    - <image src="/images/inspiring/inspiring13.jpg">
+    - <image src="/images/inspiring/inspiring14.jpg">
+    - <image src="/images/inspiring/inspiring15.jpg">
+    - <image src="/images/inspiring/inspiring16.jpg">
+    - <image src="/images/inspiring/inspiring17.jpg">
+    - <image src="/images/inspiring/inspiring18.jpg">
+    - <image src="/images/inspiring/inspiring20.jpg">
+    - <image src="/images/inspiring/inspiring21.jpg">
+    - <image src="/images/inspiring/inspiring22.jpg">
+    - <image src="/images/inspiring/inspiring23.jpg">
+    - <image src="/images/inspiring/inspiring24.jpg">
+
+ //VENT
+
+   + [*] (angry|frustrated|upset|agitated|enraged|mad|pissed|furious|offended|outraged) [*]
+   - i'm sorry you're feeling upset. i don't blame you for feeling that way. do you feel better after you talked about it?
+
+   + [*] (sad|down|unhappy|depressed|miserable|rejected|sorrowful|awful|regretful|sucks) [*]
+   - i'm really sorry to hear that you're feeling like this right now. it sounds like you're going through a tough time, and that does suck. do you feel better after you talked about it?
+   - it's completely normal to feel this way given what you're going through. your feelings are valid, and it's okay to take some time to process them. do you feel better after you talked about it?
+
+   + [*] (confused|lost|distant|cold|dry|emotionless|numb|unclear|uncertain) [*]
+   - feeling confused is completely normal, especially when faced with challenging situations such as the one you're in. take your time to sort through your thoughts. it might help to jot down those thoughts into a journal or notebook! do you feel better after you talked about it?
+   - it's okay to feel uncertain or unclear about things. sometimes, taking a step back and giving yourself some space can help bring clarity to your situation. do you feel better after you talked about it?
+   - if you're feeling overwhelmed by confusion, it might be helpful to take a break and engage in activities that bring you peace or clarity. remember, you don't have to figure out everything all at once! take things one step at a time. do you feel better after you talked about it?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+
+   + [*] (annoyed|irritated|exasperated|overwhelmed) [*]
+   - feeling annoyed is totally understandable, especially when things don't go as planned. take a deep breath, and step back. give yourself some space. do you feel better after you talked about it?
+   - i can tell that you're annoyed or overwhelmed, and i want you to know that it's okay to feel that way. i recommend that you step back. if you feel like you want to express yourself, take a deep breath and have a calm conversation expressing your feelings to whoever or whatever is making you annoyed. being aggressive isn't the answer! do you feel better after you talked about it?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+
+   + [*] (overreacting|overthinking) [*]
+   - i don't think you're overthinking or overreacting at all! even if you think you are, it's completely okay to do so. i recommend you find an activity that may keep your mind off the topic, such as baking or doodling. do you feel better after you talked about it?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+
+    + [*] (offended|hurt|betrayed|cheated) [*]
+    - they did what?!?!?! do you feel better after you talked about it?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+
+    + [*] (die|kms|kill|hurt|harm|suicidal) [*]
+    - if you are having suicidal thoughts and are in need of help, please speak with a professional. joe, brewster, and roasty are sadly not professionals. there are several 24 hour hotlines that can help much better than our coffee mugs <3 we love you tho and hope you get help <3 do you feel better after you talked about it?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+
+    + [*] (dick|asshole|fuck|fucker|bitch|motherfucker|twat|cunt|imbecile|asshat|whore|hoe|slut|shit|shithole|meanie) [*]
+    - wooaahhh language!!!! chill!!!! but ill let it slide because ur not wrong.. do you feel better after you talked about it?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+
+    + *
+    % * do you feel better after you talked about itspan action reply with yes or nospan
+    * <star> == yes => YAY!
+    ^ <image src="/images/animalimages/a1.jpg">|
+    ^ <image src="/images/animalimages/a2.jpg">|
+    ^ <image src="/images/animalimages/a3.jpg">|
+    ^ <image src="/images/animalimages/a4.jpg">|
+    ^ <image src="/images/animalimages/a5.jpg">|
+    ^ <image src="/images/animalimages/a6.jpg">|
+    ^ <image src="/images/animalimages/a7.jpg">|
+    ^ <image src="/images/animalimages/a8.jpg">|
+    ^ <image src="/images/animalimages/a9.jpg">|
+    ^ <image src="/images/animalimages/a10.jpg">|
+    ^ <image src="/images/animalimages/a11.jpg">|
+    ^ <image src="/images/animalimages/a12.jpg">|
+    ^ <image src="/images/animalimages/a13.jpg">|
+    ^ <image src="/images/animalimages/a14.jpg">|
+    ^ <image src="/images/animalimages/a15.jpg">|
+    ^ <image src="/images/animalimages/a16.jpg"> {/random}
+    ^ new image?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+
+    * <star> == no => would you like a distraction?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+
+    + *
+    % would you like a distractionspan classaction reply with yes or nospan
+    - okay no worries, type the number again to get a new activity from the same category or maybe type a different number to get an activity from another category: outdoor activities (1), indoor activities (2), creative activities (3), social activities (4), animal images (5), or inspiring quotes (6)
+    
+    + *
+    % yay image src*new imagespan classaction reply with yes or nospan
+    * <star> == yes => new image generating...{random}
+    ^ <image src="/images/animalimages/a1.jpg">|
+    ^ <image src="/images/animalimages/a2.jpg">|
+    ^ <image src="/images/animalimages/a3.jpg">|
+    ^ <image src="/images/animalimages/a4.jpg">|
+    ^ <image src="/images/animalimages/a5.jpg">|
+    ^ <image src="/images/animalimages/a6.jpg">|
+    ^ <image src="/images/animalimages/a7.jpg">|
+    ^ <image src="/images/animalimages/a8.jpg">|
+    ^ <image src="/images/animalimages/a9.jpg">|
+    ^ <image src="/images/animalimages/a10.jpg">|
+    ^ <image src="/images/animalimages/a11.jpg">|
+    ^ <image src="/images/animalimages/a12.jpg">|
+    ^ <image src="/images/animalimages/a13.jpg">|
+    ^ <image src="/images/animalimages/a14.jpg">|
+    ^ <image src="/images/animalimages/a15.jpg">|
+    ^ <image src="/images/animalimages/a16.jpg">{/random}
+    ^ new image?
+    ^ <span class="action"> Reply with 'yes' or 'no'</span> 
+    * <star> == no => ttyl ~ yolo live ur life w no regrets besstiieeee
 
 < topic
 
@@ -351,28 +583,61 @@
     + *
     % nice to meet you * i heard you woke up ready to take on the day want to make your day even betterspan classaction reply with yes or nospan
     * <star> == yes => woohooooo!! making your day 10000000% better! incoming: funny images! {random}
-    ^ <image src="/animalimages/goosebubbles.jpg">|
-    ^ <image src="/animalimages/cattongue.jpg">|
-    ^ <image src="/animalimages/vampiredog.jpg">|
-    ^ <image src="/animalimages/ducksunglasses.jpg">|
-    ^ <image src="/animalimages/yolo swag.jpg"> {/random}
+    ^ <image src="/images/animalimages/a1.jpg">|
+    ^ <image src="/images/animalimages/a2.jpg">|
+    ^ <image src="/images/animalimages/a3.jpg">|
+    ^ <image src="/images/animalimages/a4.jpg">|
+    ^ <image src="/images/animalimages/a5.jpg">|
+    ^ <image src="/images/animalimages/a6.jpg">|
+    ^ <image src="/images/animalimages/a7.jpg">|
+    ^ <image src="/images/animalimages/a8.jpg">|
+    ^ <image src="/images/animalimages/a9.jpg">|
+    ^ <image src="/images/animalimages/a10.jpg">|
+    ^ <image src="/images/animalimages/a11.jpg">|
+    ^ <image src="/images/animalimages/a12.jpg">|
+    ^ <image src="/images/animalimages/a13.jpg">|
+    ^ <image src="/images/animalimages/a14.jpg">|
+    ^ <image src="/images/animalimages/a15.jpg">|
+    ^ <image src="/images/animalimages/a16.jpg"> {/random}
     ^ would you like a new image?
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     * <star> == no => that is the wrong response! silly goose! incoming: funny images! {random}
-    ^ <image src="/animalimages/goosebubbles.jpg">|
-    ^ <image src="/animalimages/ducksunglasses.jpg">|
-    ^ <image src="/animalimages/cattongue.jpg">|
-    ^ <image src="/animalimages/vampiredog.jpg">|
-    ^ <image src="/animalimages/yolo swag.jpg"> {/random}
+    ^ <image src="/images/animalimages/a1.jpg">|
+    ^ <image src="/images/animalimages/a2.jpg">|
+    ^ <image src="/images/animalimages/a3.jpg">|
+    ^ <image src="/images/animalimages/a4.jpg">|
+    ^ <image src="/images/animalimages/a5.jpg">|
+    ^ <image src="/images/animalimages/a6.jpg">|
+    ^ <image src="/images/animalimages/a7.jpg">|
+    ^ <image src="/images/animalimages/a8.jpg">|
+    ^ <image src="/images/animalimages/a9.jpg">|
+    ^ <image src="/images/animalimages/a10.jpg">|
+    ^ <image src="/images/animalimages/a11.jpg">|
+    ^ <image src="/images/animalimages/a12.jpg">|
+    ^ <image src="/images/animalimages/a13.jpg">|
+    ^ <image src="/images/animalimages/a14.jpg">|
+    ^ <image src="/images/animalimages/a15.jpg">|
+    ^ <image src="/images/animalimages/a16.jpg">{/random}
     
     + *
     % woohooooo making your day 10000000 better incoming funny images image src*would you like a new imagespan classaction reply with yes or nospan
     * <star> == yes => new image generating...{random}
-    ^ <image src="/animalimages/goosebubbles.jpg">|
-    ^ <image src="/animalimages/cattongue.jpg">|
-    ^ <image src="/animalimages/ducksunglasses.jpg">|
-    ^ <image src="/animalimages/vampiredog.jpg">|
-    ^ <image src="/animalimages/yolo swag.jpg"> {/random}
+    ^ <image src="/images/animalimages/a1.jpg">|
+    ^ <image src="/images/animalimages/a2.jpg">|
+    ^ <image src="/images/animalimages/a3.jpg">|
+    ^ <image src="/images/animalimages/a4.jpg">|
+    ^ <image src="/images/animalimages/a5.jpg">|
+    ^ <image src="/images/animalimages/a6.jpg">|
+    ^ <image src="/images/animalimages/a7.jpg">|
+    ^ <image src="/images/animalimages/a8.jpg">|
+    ^ <image src="/images/animalimages/a9.jpg">|
+    ^ <image src="/images/animalimages/a10.jpg">|
+    ^ <image src="/images/animalimages/a11.jpg">|
+    ^ <image src="/images/animalimages/a12.jpg">|
+    ^ <image src="/images/animalimages/a13.jpg">|
+    ^ <image src="/images/animalimages/a14.jpg">|
+    ^ <image src="/images/animalimages/a15.jpg">|
+    ^ <image src="/images/animalimages/a16.jpg">{/random}
     ^ would you like a new image?
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
     * <star> == no => enjoy!!!!!! hope the rest of your day is SPLENDID!!!!
@@ -380,14 +645,33 @@
     + *
     % new image generatingimage src*would you like a new imagespan classaction reply with yes or nospan
     * <star> == yes => new image generating...{random}
-    ^ <image src="/animalimages/goosebubbles.jpg">|
-    ^ <image src="/animalimages/cattongue.jpg">|
-    ^ <image src="/animalimages/vampiredog.jpg">|
-    ^ <image src="/animalimages/ducksunglasses.jpg">|
-    ^ <image src="/animalimages/yolo swag.jpg"> {/random}
+    ^ <image src="/images/animalimages/a1.jpg">|
+    ^ <image src="/images/animalimages/a2.jpg">|
+    ^ <image src="/images/animalimages/a3.jpg">|
+    ^ <image src="/images/animalimages/a4.jpg">|
+    ^ <image src="/images/animalimages/a5.jpg">|
+    ^ <image src="/images/animalimages/a6.jpg">|
+    ^ <image src="/images/animalimages/a7.jpg">|
+    ^ <image src="/images/animalimages/a8.jpg">|
+    ^ <image src="/images/animalimages/a9.jpg">|
+    ^ <image src="/images/animalimages/a10.jpg">|
+    ^ <image src="/images/animalimages/a11.jpg">|
+    ^ <image src="/images/animalimages/a12.jpg">|
+    ^ <image src="/images/animalimages/a13.jpg">|
+    ^ <image src="/images/animalimages/a14.jpg">|
+    ^ <image src="/images/animalimages/a15.jpg">|
+    ^ <image src="/images/animalimages/a16.jpg">{/random}
     ^ would you like a new image?
     ^ <span class="action"> Reply with 'yes' or 'no'</span> 
-    * <star> == no => hooray!!!!!! hope the rest of your day is as AMAZING as you are!!!!
+    * <star> == no => hooray!!!!!! hope the rest of your day is as AMAZING as you are!!!! 
 
 
 < topic
+
+
++ (thanks|thank you)
+- no problem!
+- you're welcome!
+- anytime :)
+- ofc!
+- no worries!

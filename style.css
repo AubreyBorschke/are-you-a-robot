@@ -22,6 +22,18 @@ body {
   color: #ed8787;
 }
 
+.intro_name {
+  font-family: "krul", sans-serif;
+  font-weight: 700;
+  font-style: normal;  
+  font-size: 30pt;
+  display: inline-block;
+  text-align: left;
+  height: 13vh;
+  justify-content: center;
+
+}
+
 .wrapper {
   height: 95vh;
 }
@@ -134,23 +146,7 @@ img {
   background: transparent;
 }
 
-.intro_name {
-  font-family: "orbital", sans-serif;
-  font-weight: 700;
-  font-style: normal;  
-  font-size: 150%;
-  display: inline-block;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  margin-left: 150px;
-  text-align: center
-}
 
-.list {
-  list-style-type: circle;
-  display: inline-block;
-  
-}
 
 .background-roasty {
   background-image: url('backgrounds/roastybackground.png'); /* Path to your image */
@@ -169,3 +165,17 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.cups-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 150%
+ }
+ 
+
+ .cups-wrapper > span {
+  width: 33%;
+  text-align: center;
+  font-size: 80%;
+ }
+ 
